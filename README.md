@@ -10,7 +10,7 @@ that come up before any other code review can begin.
 
 The corpus answers a common question: *"how do I write JavaScript that will pass
 a senior reviewer's first read?"* The answer is no longer "skim two large
-guides" — it is "load this Skill, follow the rules, avoid the anti-patterns."
+guides" — it is "load this Prime, follow the rules, avoid the anti-patterns."
 
 ---
 
@@ -65,7 +65,7 @@ modules) and ignores them otherwise.
 
 ## License
 
-This Skill is dual-licensed:
+This Prime is dual-licensed:
 
 | Layer | License |
 |---|---|
