@@ -1,0 +1,14 @@
+<atom
+  id="@web-style/rule-default-parameters-not-mutate-args"
+  kind="rule"
+  version="0.1.0"
+  domain="web-style"
+  tokens="201"
+  q="4.0">
+  <description>Express defaults in the parameter list with `=`. Do not patch missing values inside the body with reassignment, `||`, or by writing into `arguments`. Default-parameter syntax keeps the function signature self-documenting and makes the default value visible at the call boundary.</description>
+  <projection>
+    <level name="summary" file="chunks/summary.md" tokens="86"/>
+    <level name="core"    file="chunks/core.md"    tokens="201"/>
+    <level name="full"    file="chunks/full.md"    tokens="219"/>
+  </projection>
+</atom>

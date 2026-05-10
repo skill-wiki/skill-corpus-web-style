@@ -1,0 +1,31 @@
+// Source: Airbnb JavaScript Style Guide (MIT)
+// https://github.com/airbnb/javascript#references--disallow-var
+
+anti-pattern UseVar {
+  id: "@web-style/anti-pattern-use-var"
+  version: "0.1.0"
+
+  label: "Declaring variables with `var`"
+  domain: web-style
+
+  description: "Using `var` to declare any binding in modern JavaScript or TypeScript. `var` is hoisted to the enclosing function, has no temporal-dead-zone protection, and is silently re-declarable — three properties that exist only because `var` predates block scoping."
+
+  why-bad: "`var` leaks across blocks. A `var i` inside an `if` is visible at the top of the function and after the block exits. Re-declaring the same `var` is silent. Hoisting means the binding exists before its declaration line, which surprises readers and breaks closures inside loops. Every modern style guide and lint configuration treats `var` as legacy noise."
+
+  instead-do: """
+    Use `const` for bindings you do not reassign and `let` for bindings
+    you do. Both are block-scoped, neither is hoisted past the start of
+    the block, and both throw on duplicate declaration. Turn on the
+    ESLint `no-var` rule as `error` to catch regressions.
+  """
+
+  notes: [
+    "The only remaining excuse for `var` is supporting pre-ES2015 runtimes — no longer relevant for any new code.",
+    "TypeScript already discourages `var` via type-narrowing semantics, but `no-var` still catches it.",
+  ]
+
+  related: [
+    @web-style/rule-prefer-const-over-let,
+    @web-style/principle-clarity-over-cleverness,
+  ]
+}

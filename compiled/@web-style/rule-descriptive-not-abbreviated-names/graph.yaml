@@ -1,0 +1,6 @@
+atom: "@web-style/rule-descriptive-not-abbreviated-names"
+relations:
+  - type: related
+    target: "@web-style/rule-camelcase-variables-and-functions"
+  - type: related
+    target: "@web-style/principle-clarity-over-cleverness"

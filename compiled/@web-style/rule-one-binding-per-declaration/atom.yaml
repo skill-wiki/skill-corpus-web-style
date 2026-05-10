@@ -1,0 +1,20 @@
+id: "@web-style/rule-one-binding-per-declaration"
+kind: rule
+version: "0.1.0"
+description: "Write `const a = 1; const b = 2;` rather than `const a = 1, b = 2;`. One declaration per binding makes diffs cleaner, lets you initialise each from a different expression without contortions, and avoids the trap of accidentally giving every name in a comma-separated list the same `const`-vs-`let` modifier."
+domain: web-style
+content_hash: "sha256:9de783a8e4c4545ea33b262952e91df07f0a2ea199d6c200993f0613a753f8ca"
+tokens:
+  summary: 92
+  core: 180
+  full: 195
+projection:
+  summary: "chunks/summary.md"
+  core: "chunks/core.md"
+  full: "chunks/full.md"
+quality:
+  overall: 4
+relations:
+  - { type: related, target: "@web-style/rule-prefer-const-over-let" }
+  - { type: related, target: "@web-style/principle-clarity-over-cleverness" }
+created_at: "2026-05-10"

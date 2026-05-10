@@ -1,0 +1,33 @@
+// Source: Google JavaScript Style Guide § 5.2.5 (CC-BY 3.0)
+// https://google.github.io/styleguide/jsguide.html#naming-constant-names
+// Also: Airbnb JavaScript Style Guide (MIT)
+// https://github.com/airbnb/javascript#naming--uppercase
+
+rule UppercaseSnakeForTrueConstants {
+  id: "@web-style/rule-uppercase-snake-for-true-constants"
+  version: "0.1.0"
+
+  label: "Use UPPER_SNAKE_CASE only for module-level deeply-immutable constants"
+  domain: web-style
+
+  description: "Reserve `UPPER_SNAKE_CASE` for top-level program-wide constants whose value is fixed for the lifetime of the program and is also a primitive or deeply frozen value. Not every `const` deserves UPPER_SNAKE_CASE — only the ones that act as named magic values."
+
+  checks: [
+    "The binding is at module scope (not a local `const` inside a function).",
+    "The value is a primitive, a frozen object, or otherwise not meaningfully mutable.",
+    "The name reads as a constant the consumer must not change: `MAX_RETRIES`, `DEFAULT_TIMEOUT_MS`, `API_BASE_URL`.",
+    "Ordinary local `const` bindings stay in camelCase — `const user = await fetchUser()` is camelCase, not UPPER_SNAKE.",
+  ]
+
+  tags: [naming, constants, snake-case, javascript, google, airbnb]
+
+  notes: [
+    "Google's rule is strict: UPPER_SNAKE_CASE means \"primary purpose is to be a constant\". A `const config = loadConfig()` at module scope is camelCase because it is not a fixed magic value, even though it is a `const` binding.",
+    "Enum members and config keys imported from a `.env` file are conventional UPPER_SNAKE_CASE candidates.",
+  ]
+
+  related: [
+    @web-style/rule-camelcase-variables-and-functions,
+    @web-style/rule-prefer-const-over-let,
+  ]
+}

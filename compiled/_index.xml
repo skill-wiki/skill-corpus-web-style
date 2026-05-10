@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prime_index version="1.0" total="20" total_tokens="4761">
+  <cluster name="web-style" density="0.00">
+    <atom id="@web-style/anti-pattern-import-for-side-effects" kind="anti-pattern" tokens="346" q="4.0">
+      Writing `import &apos;./polyfills&apos;` or `import &apos;register-handlers&apos;` to trigger code …
+      <edge type="related" target="@web-style/principle-clarity-over-cleverness"/>
+      <edge type="related" target="@web-style/rule-named-imports-stable-paths"/>
+    </atom>
+    <atom id="@web-style/anti-pattern-mutable-named-export" kind="anti-pattern" tokens="338" q="4.0">
+      Declaring `export let counter = 0` (or similar) and then reassigning it elsewhe…
+      <edge type="related" target="@web-style/rule-named-imports-stable-paths"/>
+      <edge type="related" target="@web-style/rule-prefer-const-over-let"/>
+    </atom>
+    <atom id="@web-style/anti-pattern-reassign-parameters" kind="anti-pattern" tokens="313" q="4.0">
+      Treating a parameter as a mutable local — assigning to it, mutating its propert…
+      <edge type="related" target="@web-style/principle-clarity-over-cleverness"/>
+      <edge type="related" target="@web-style/rule-default-parameters-not-mutate-args"/>
+      <edge type="related" target="@web-style/rule-prefer-const-over-let"/>
+    </atom>
+    <atom id="@web-style/anti-pattern-use-var" kind="anti-pattern" tokens="252" q="4.0">
+      Using `var` to declare any binding in modern JavaScript or TypeScript. `var` is…
+      <edge type="related" target="@web-style/principle-clarity-over-cleverness"/>
+      <edge type="related" target="@web-style/rule-prefer-const-over-let"/>
+    </atom>
+    <atom id="@web-style/principle-clarity-over-cleverness" kind="principle" tokens="268" q="4.0">
+      Code is read many more times than it is written. Optimise for the next reader —…
+      <edge type="related" target="@web-style/principle-consistency-within-codebase"/>
+      <edge type="related" target="@web-style/rule-descriptive-not-abbreviated-names"/>
+      <edge type="related" target="@web-style/rule-prefer-functional-array-methods"/>
+    </atom>
+    <atom id="@web-style/principle-consistency-within-codebase" kind="principle" tokens="325" q="4.0">
+      Within one codebase, the same problem should be solved the same way. When two r…
+      <edge type="related" target="@web-style/principle-clarity-over-cleverness"/>
+      <edge type="related" target="@web-style/rule-camelcase-variables-and-functions"/>
+      <edge type="related" target="@web-style/rule-named-imports-stable-paths"/>
+    </atom>
+    <atom id="@web-style/rule-arrow-functions-for-callbacks" kind="rule" tokens="211" q="4.0">
+      When the function is anonymous and passed inline as an argument or assigned to …
+      <edge type="related" target="@web-style/anti-pattern-reassign-parameters"/>
+      <edge type="related" target="@web-style/principle-clarity-over-cleverness"/>
+      <edge type="related" target="@web-style/rule-default-parameters-not-mutate-args"/>
+    </atom>
+    <atom id="@web-style/rule-camelcase-variables-and-functions" kind="rule" tokens="176" q="4.0">
+      Local variables, parameters, function names, methods, and non-static class fiel…
+      <edge type="related" target="@web-style/rule-descriptive-not-abbreviated-names"/>
+      <edge type="related" target="@web-style/rule-pascalcase-classes-and-types"/>
+      <edge type="related" target="@web-style/rule-uppercase-snake-for-true-constants"/>
+    </atom>
+    <atom id="@web-style/rule-default-parameters-not-mutate-args" kind="rule" tokens="201" q="4.0">
+      Express defaults in the parameter list with `=`. Do not patch missing values in…
+      <edge type="related" target="@web-style/anti-pattern-reassign-parameters"/>
+      <edge type="related" target="@web-style/rule-arrow-functions-for-callbacks"/>
+    </atom>
+    <atom id="@web-style/rule-descriptive-not-abbreviated-names" kind="rule" tokens="237" q="4.0">
+      Identifier length follows information content. Use whole words that describe th…
+      <edge type="related" target="@web-style/principle-clarity-over-cleverness"/>
+      <edge type="related" target="@web-style/rule-camelcase-variables-and-functions"/>
+    </atom>
+    <atom id="@web-style/rule-destructure-objects-and-arrays" kind="rule" tokens="231" q="4.0">
+      When a function reads more than one property of an object — its parameter, its …
+      <edge type="related" target="@web-style/rule-object-shorthand-and-computed-keys"/>
+      <edge type="related" target="@web-style/rule-prefer-spread-over-apply"/>
+    </atom>
+    <atom id="@web-style/rule-group-const-then-let" kind="rule" tokens="165" q="4.0">
+      Within a scope, list every `const` binding before any `let` binding. The reader…
+      <edge type="related" target="@web-style/rule-one-binding-per-declaration"/>
+      <edge type="related" target="@web-style/rule-prefer-const-over-let"/>
+    </atom>
+    <atom id="@web-style/rule-named-imports-stable-paths" kind="rule" tokens="230" q="4.0">
+      Use `import { foo, bar } from &apos;./lib&apos;` rather than `import lib from &apos;./lib&apos;` fo…
+      <edge type="related" target="@web-style/anti-pattern-import-for-side-effects"/>
+      <edge type="related" target="@web-style/anti-pattern-mutable-named-export"/>
+      <edge type="related" target="@web-style/principle-consistency-within-codebase"/>
+    </atom>
+    <atom id="@web-style/rule-object-shorthand-and-computed-keys" kind="rule" tokens="236" q="4.0">
+      Build objects with the most expressive ES2015+ syntax available at the literal:…
+      <edge type="related" target="@web-style/rule-prefer-functional-array-methods"/>
+      <edge type="related" target="@web-style/rule-prefer-spread-over-apply"/>
+    </atom>
+    <atom id="@web-style/rule-one-binding-per-declaration" kind="rule" tokens="180" q="4.0">
+      Write `const a = 1; const b = 2;` rather than `const a = 1, b = 2;`. One declar…
+      <edge type="related" target="@web-style/principle-clarity-over-cleverness"/>
+      <edge type="related" target="@web-style/rule-prefer-const-over-let"/>
+    </atom>
+    <atom id="@web-style/rule-pascalcase-classes-and-types" kind="rule" tokens="187" q="4.0">
+      Names for things that produce instances or describe shapes — classes, construct…
+      <edge type="related" target="@web-style/rule-camelcase-variables-and-functions"/>
+      <edge type="related" target="@web-style/rule-uppercase-snake-for-true-constants"/>
+    </atom>
+    <atom id="@web-style/rule-prefer-const-over-let" kind="rule" tokens="188" q="4.0">
+      Declare every binding with `const` by default. Reach for `let` only when the bi…
+      <edge type="related" target="@web-style/anti-pattern-use-var"/>
+      <edge type="related" target="@web-style/principle-clarity-over-cleverness"/>
+    </atom>
+    <atom id="@web-style/rule-prefer-functional-array-methods" kind="rule" tokens="230" q="4.0">
+      When iterating an array to produce a derived value — a new array, a single accu…
+      <edge type="related" target="@web-style/principle-clarity-over-cleverness"/>
+      <edge type="related" target="@web-style/rule-arrow-functions-for-callbacks"/>
+      <edge type="related" target="@web-style/rule-object-shorthand-and-computed-keys"/>
+    </atom>
+    <atom id="@web-style/rule-prefer-spread-over-apply" kind="rule" tokens="242" q="4.0">
+      When passing a list of values as positional arguments, spread the array (`fn(..…
+      <edge type="related" target="@web-style/rule-arrow-functions-for-callbacks"/>
+      <edge type="related" target="@web-style/rule-object-shorthand-and-computed-keys"/>
+      <edge type="related" target="@web-style/rule-prefer-functional-array-methods"/>
+    </atom>
+    <atom id="@web-style/rule-uppercase-snake-for-true-constants" kind="rule" tokens="205" q="4.0">
+      Reserve `UPPER_SNAKE_CASE` for top-level program-wide constants whose value is …
+      <edge type="related" target="@web-style/rule-camelcase-variables-and-functions"/>
+      <edge type="related" target="@web-style/rule-prefer-const-over-let"/>
+    </atom>
+  </cluster>
+</prime_index>

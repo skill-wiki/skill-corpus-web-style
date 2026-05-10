@@ -1,0 +1,20 @@
+id: "@web-style/rule-default-parameters-not-mutate-args"
+kind: rule
+version: "0.1.0"
+description: "Express defaults in the parameter list with `=`. Do not patch missing values inside the body with reassignment, `||`, or by writing into `arguments`. Default-parameter syntax keeps the function signature self-documenting and makes the default value visible at the call boundary."
+domain: web-style
+content_hash: "sha256:f392cb57a336541fc21ea75d646ced95e65e198e46703c800431d11b81f6ffd9"
+tokens:
+  summary: 86
+  core: 201
+  full: 219
+projection:
+  summary: "chunks/summary.md"
+  core: "chunks/core.md"
+  full: "chunks/full.md"
+quality:
+  overall: 4
+relations:
+  - { type: related, target: "@web-style/rule-arrow-functions-for-callbacks" }
+  - { type: related, target: "@web-style/anti-pattern-reassign-parameters" }
+created_at: "2026-05-10"

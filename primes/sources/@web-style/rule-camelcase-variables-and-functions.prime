@@ -1,0 +1,34 @@
+// Source: Airbnb JavaScript Style Guide (MIT)
+// https://github.com/airbnb/javascript#naming--camelCase
+// Also: Google JavaScript Style Guide § 5.2.4 (CC-BY 3.0)
+// https://google.github.io/styleguide/jsguide.html#naming-camel-case-defined
+
+rule CamelCaseVariablesAndFunctions {
+  id: "@web-style/rule-camelcase-variables-and-functions"
+  version: "0.1.0"
+
+  label: "Use camelCase for variables, functions, methods, and instance properties"
+  domain: web-style
+
+  description: "Local variables, parameters, function names, methods, and non-static class fields are written in `camelCase` — first word lowercase, every subsequent word capitalised, no underscores or hyphens. Both Airbnb and Google's style guides require this."
+
+  checks: [
+    "Names match the regex `[a-z][a-zA-Z0-9]*` for ordinary identifiers.",
+    "No leading or trailing underscores on public names; no `snake_case` for ordinary identifiers.",
+    "Acronyms in names are treated as words: `parseHtmlUrl`, not `parseHTMLURL`.",
+    "ESLint `camelcase` rule is enabled.",
+  ]
+
+  tags: [naming, camelcase, javascript, airbnb, google, error]
+
+  notes: [
+    "Treating acronyms as words keeps boundaries unambiguous in long names: compare `getXmlHttpRequestUrl` (clear) with `getXMLHTTPRequestURL` (where do words start?).",
+    "Constants in the module-level immutable sense use UPPER_SNAKE_CASE — see the relevant rule.",
+  ]
+
+  related: [
+    @web-style/rule-pascalcase-classes-and-types,
+    @web-style/rule-uppercase-snake-for-true-constants,
+    @web-style/rule-descriptive-not-abbreviated-names,
+  ]
+}

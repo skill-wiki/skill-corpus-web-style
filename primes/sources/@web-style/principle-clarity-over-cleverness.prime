@@ -1,0 +1,35 @@
+// Source: Airbnb JavaScript Style Guide (MIT)
+// https://github.com/airbnb/javascript
+// Also: Google JavaScript Style Guide § 1 (CC-BY 3.0)
+// https://google.github.io/styleguide/jsguide.html#introduction
+
+principle ClarityOverCleverness {
+  id: "@web-style/principle-clarity-over-cleverness"
+  version: "0.1.0"
+
+  domain: web-style
+
+  description: "Code is read many more times than it is written. Optimise for the next reader — usually a tired version of yourself in six months — rather than for a reduction in keystrokes today. Where the language offers a terse form and an explicit form that mean the same thing, pick the explicit one unless the terse form is itself a well-known idiom."
+
+  statement: "When a clever idiom and an obvious idiom both work, pick the obvious one. Save the cleverness for the cases where it earns its keep — performance hot paths backed by benchmarks, language-level constraints that allow no other expression. Everywhere else, write the boring version that the next reader can scan in one pass."
+
+  tags: [principle, readability, javascript, airbnb, google]
+
+  applies-to: [
+    "Naming — full descriptive words over hand-rolled abbreviations.",
+    "Control flow — early returns and named helpers over deeply nested ternaries.",
+    "Data shaping — destructuring, named returns, and explicit object literals over positional tuples.",
+    "Imports — named imports of specific symbols over wildcard or side-effect imports.",
+  ]
+
+  notes: [
+    "This is the parent rationale for many of the per-rule choices in this corpus: `prefer-const`, `no-var`, `descriptive-names`, `prefer-functional-array-methods`, etc. each cash out the same heuristic.",
+    "Cleverness still belongs in the codebase — but in *one* place, behind an honest name, with a comment explaining why the obvious version was insufficient.",
+  ]
+
+  related: [
+    @web-style/principle-consistency-within-codebase,
+    @web-style/rule-descriptive-not-abbreviated-names,
+    @web-style/rule-prefer-functional-array-methods,
+  ]
+}

@@ -1,0 +1,33 @@
+// Source: Airbnb JavaScript Style Guide (MIT)
+// https://github.com/airbnb/javascript#naming--descriptive
+// Also: Google JavaScript Style Guide § 5.3 (CC-BY 3.0)
+// https://google.github.io/styleguide/jsguide.html#naming-rules-by-identifier-type
+
+rule DescriptiveNotAbbreviatedNames {
+  id: "@web-style/rule-descriptive-not-abbreviated-names"
+  version: "0.1.0"
+
+  label: "Names describe intent in full words; do not abbreviate beyond convention"
+  domain: web-style
+
+  description: "Identifier length follows information content. Use whole words that describe the role of the binding. Reserve single-letter names for canonical mathematical loop indices (`i`, `j`) or for ubiquitous higher-order callbacks (`(x) => x.id`). Avoid hand-rolled abbreviations — they save typing once and cost reading every time after."
+
+  checks: [
+    "No single-letter names except canonical loop indices and tiny lambdas.",
+    "Avoid hand-rolled abbreviations (`usrLst`, `qryRslt`, `cb`, `fn`); spell `userList`, `queryResult`, `callback`, `function`.",
+    "Use only abbreviations the entire industry already shares (`url`, `id`, `db`, `ms`, `xml`, `json`, `http`).",
+    "Boolean names are predicates: `isActive`, `hasPermission`, `canEdit`, `shouldRetry` — not `active`, `permission`, `edit`, `retry`.",
+  ]
+
+  tags: [naming, readability, javascript, airbnb, google, suggestion]
+
+  notes: [
+    "Google's guide forbids \"deletion of letters within a word\" (e.g. `Lst` for `List`); industry-standard contractions are fine.",
+    "If a name needs a clarifying comment, the name is wrong — rename until the comment is unnecessary.",
+  ]
+
+  related: [
+    @web-style/rule-camelcase-variables-and-functions,
+    @web-style/principle-clarity-over-cleverness,
+  ]
+}

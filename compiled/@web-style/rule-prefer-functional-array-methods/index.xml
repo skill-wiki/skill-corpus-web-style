@@ -1,0 +1,14 @@
+<atom
+  id="@web-style/rule-prefer-functional-array-methods"
+  kind="rule"
+  version="0.1.0"
+  domain="web-style"
+  tokens="230"
+  q="4.0">
+  <description>When iterating an array to produce a derived value — a new array, a single accumulator, the first match, a boolean — use the corresponding higher-order method. The named method tells the reader what the loop is *for* in one word; a `for` loop with a hand-rolled accumulator buries that intent under index plumbing.</description>
+  <projection>
+    <level name="summary" file="chunks/summary.md" tokens="95"/>
+    <level name="core"    file="chunks/core.md"    tokens="230"/>
+    <level name="full"    file="chunks/full.md"    tokens="253"/>
+  </projection>
+</atom>

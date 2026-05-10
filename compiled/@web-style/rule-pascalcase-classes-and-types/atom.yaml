@@ -1,0 +1,20 @@
+id: "@web-style/rule-pascalcase-classes-and-types"
+kind: rule
+version: "0.1.0"
+description: "Names for things that produce instances or describe shapes — classes, constructor functions, TypeScript types, interfaces, and enum names — are written in `PascalCase`: every word capitalised including the first."
+domain: web-style
+content_hash: "sha256:3c14b530747360ec0ccc5fbc7b42eb675039e107348b9c888cffdb7ce977d6bb"
+tokens:
+  summary: 68
+  core: 187
+  full: 208
+projection:
+  summary: "chunks/summary.md"
+  core: "chunks/core.md"
+  full: "chunks/full.md"
+quality:
+  overall: 4
+relations:
+  - { type: related, target: "@web-style/rule-camelcase-variables-and-functions" }
+  - { type: related, target: "@web-style/rule-uppercase-snake-for-true-constants" }
+created_at: "2026-05-10"

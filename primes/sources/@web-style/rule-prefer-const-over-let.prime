@@ -1,0 +1,31 @@
+// Source: Airbnb JavaScript Style Guide (MIT)
+// https://github.com/airbnb/javascript#references--prefer-const
+
+rule PreferConstOverLet {
+  id: "@web-style/rule-prefer-const-over-let"
+  version: "0.1.0"
+
+  label: "Use `const` for all references; only fall back to `let` when reassignment is required"
+  domain: web-style
+
+  description: "Declare every binding with `const` by default. Reach for `let` only when the binding is genuinely reassigned. A `const` binding signals to the reader that the slot will not change — that signal is a load-bearing part of readability."
+
+  checks: [
+    "Every variable that is not reassigned in its scope is declared with `const`.",
+    "`let` appears only on bindings that have at least one assignment after the declaration.",
+    "Loop counters and accumulators that genuinely change use `let`; everything else is `const`.",
+    "ESLint `prefer-const` is on as `error` and `no-const-assign` is on as `error`.",
+  ]
+
+  tags: [naming, declaration, const, let, error, javascript, airbnb]
+
+  notes: [
+    "`const` does not mean immutable — `const obj = {}` still allows `obj.x = 1`. It means the binding will not be reassigned.",
+    "If you cannot decide between `const` and `let`, default to `const` and let a failing reassignment force the switch.",
+  ]
+
+  related: [
+    @web-style/anti-pattern-use-var,
+    @web-style/principle-clarity-over-cleverness,
+  ]
+}

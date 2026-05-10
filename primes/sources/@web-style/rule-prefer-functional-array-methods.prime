@@ -1,0 +1,33 @@
+// Source: Airbnb JavaScript Style Guide (MIT)
+// https://github.com/airbnb/javascript#iterators-and-generators
+
+rule PreferFunctionalArrayMethods {
+  id: "@web-style/rule-prefer-functional-array-methods"
+  version: "0.1.0"
+
+  label: "Use `map` / `filter` / `reduce` / `find` over hand-rolled `for` loops over arrays"
+  domain: web-style
+
+  description: "When iterating an array to produce a derived value — a new array, a single accumulator, the first match, a boolean — use the corresponding higher-order method. The named method tells the reader what the loop is *for* in one word; a `for` loop with a hand-rolled accumulator buries that intent under index plumbing."
+
+  checks: [
+    "Mapping uses `array.map(fn)`, not a `for` loop pushing into a fresh array.",
+    "Filtering uses `array.filter(predicate)`.",
+    "Aggregating to a scalar uses `array.reduce(reducer, init)`.",
+    "Membership / first-match uses `array.some` / `array.find`; existence uses `array.includes`.",
+    "ESLint `no-iterator` (forbid `iterator`/`__iterator__`) is enabled; teams may add `no-restricted-syntax` to flag plain `for` over arrays.",
+  ]
+
+  tags: [array, functional, iteration, javascript, airbnb, suggestion]
+
+  notes: [
+    "`for…of` is acceptable when you need early `break`, are working with a non-array iterable, or genuinely need imperative control flow.",
+    "Avoid `for…in` on arrays — it iterates string keys including inherited enumerables, not values.",
+  ]
+
+  related: [
+    @web-style/rule-arrow-functions-for-callbacks,
+    @web-style/rule-object-shorthand-and-computed-keys,
+    @web-style/principle-clarity-over-cleverness,
+  ]
+}

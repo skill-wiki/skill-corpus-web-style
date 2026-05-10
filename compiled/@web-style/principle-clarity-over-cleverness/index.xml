@@ -1,0 +1,14 @@
+<atom
+  id="@web-style/principle-clarity-over-cleverness"
+  kind="principle"
+  version="0.1.0"
+  domain="web-style"
+  tokens="268"
+  q="4.0">
+  <description>Code is read many more times than it is written. Optimise for the next reader — usually a tired version of yourself in six months — rather than for a reduction in keystrokes today. Where the language offers a terse form and an explicit form that mean the same thing, pick the explicit one unless the terse form is itself a well-known idiom.</description>
+  <projection>
+    <level name="summary" file="chunks/summary.md" tokens="182"/>
+    <level name="core"    file="chunks/core.md"    tokens="268"/>
+    <level name="full"    file="chunks/full.md"    tokens="268"/>
+  </projection>
+</atom>

@@ -1,0 +1,14 @@
+<atom
+  id="@web-style/anti-pattern-mutable-named-export"
+  kind="anti-pattern"
+  version="0.1.0"
+  domain="web-style"
+  tokens="338"
+  q="4.0">
+  <description>Declaring `export let counter = 0` (or similar) and then reassigning it elsewhere in the module so importers&apos; references update with each change. Ditto exporting an object whose properties are reassigned post-import as a way to push state across module boundaries.</description>
+  <projection>
+    <level name="summary" file="chunks/summary.md" tokens="82"/>
+    <level name="core"    file="chunks/core.md"    tokens="338"/>
+    <level name="full"    file="chunks/full.md"    tokens="595"/>
+  </projection>
+</atom>

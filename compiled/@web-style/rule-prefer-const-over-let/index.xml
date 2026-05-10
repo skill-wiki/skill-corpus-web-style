@@ -1,0 +1,14 @@
+<atom
+  id="@web-style/rule-prefer-const-over-let"
+  kind="rule"
+  version="0.1.0"
+  domain="web-style"
+  tokens="188"
+  q="4.0">
+  <description>Declare every binding with `const` by default. Reach for `let` only when the binding is genuinely reassigned. A `const` binding signals to the reader that the slot will not change — that signal is a load-bearing part of readability.</description>
+  <projection>
+    <level name="summary" file="chunks/summary.md" tokens="72"/>
+    <level name="core"    file="chunks/core.md"    tokens="188"/>
+    <level name="full"    file="chunks/full.md"    tokens="212"/>
+  </projection>
+</atom>

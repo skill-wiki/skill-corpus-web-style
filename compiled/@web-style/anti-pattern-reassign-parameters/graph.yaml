@@ -1,0 +1,8 @@
+atom: "@web-style/anti-pattern-reassign-parameters"
+relations:
+  - type: related
+    target: "@web-style/rule-default-parameters-not-mutate-args"
+  - type: related
+    target: "@web-style/rule-prefer-const-over-let"
+  - type: related
+    target: "@web-style/principle-clarity-over-cleverness"

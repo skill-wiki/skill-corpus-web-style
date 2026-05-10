@@ -1,0 +1,14 @@
+<atom
+  id="@web-style/rule-prefer-spread-over-apply"
+  kind="rule"
+  version="0.1.0"
+  domain="web-style"
+  tokens="242"
+  q="4.0">
+  <description>When passing a list of values as positional arguments, spread the array (`fn(...args)`) instead of calling `fn.apply(null, args)`. When collecting variadic arguments, use rest parameters (`function fn(...args)`) instead of inspecting the legacy `arguments` object. Both spread and rest are dedicated syntax for the job, and both compose cleanly with arrow functions.</description>
+  <projection>
+    <level name="summary" file="chunks/summary.md" tokens="106"/>
+    <level name="core"    file="chunks/core.md"    tokens="242"/>
+    <level name="full"    file="chunks/full.md"    tokens="265"/>
+  </projection>
+</atom>

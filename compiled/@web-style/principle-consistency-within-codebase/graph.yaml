@@ -1,0 +1,8 @@
+atom: "@web-style/principle-consistency-within-codebase"
+relations:
+  - type: related
+    target: "@web-style/principle-clarity-over-cleverness"
+  - type: related
+    target: "@web-style/rule-named-imports-stable-paths"
+  - type: related
+    target: "@web-style/rule-camelcase-variables-and-functions"

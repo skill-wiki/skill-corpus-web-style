@@ -1,0 +1,14 @@
+<atom
+  id="@web-style/principle-consistency-within-codebase"
+  kind="principle"
+  version="0.1.0"
+  domain="web-style"
+  tokens="325"
+  q="4.0">
+  <description>Within one codebase, the same problem should be solved the same way. When two reasonable conventions exist, pick one and apply it everywhere. The cost of mixing is real: the reader cannot tell when a different choice carries information versus when it is just whoever-typed-it-first preference, so they have to slow down on every line.</description>
+  <projection>
+    <level name="summary" file="chunks/summary.md" tokens="194"/>
+    <level name="core"    file="chunks/core.md"    tokens="325"/>
+    <level name="full"    file="chunks/full.md"    tokens="325"/>
+  </projection>
+</atom>

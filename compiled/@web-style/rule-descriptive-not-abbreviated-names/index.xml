@@ -1,0 +1,14 @@
+<atom
+  id="@web-style/rule-descriptive-not-abbreviated-names"
+  kind="rule"
+  version="0.1.0"
+  domain="web-style"
+  tokens="237"
+  q="4.0">
+  <description>Identifier length follows information content. Use whole words that describe the role of the binding. Reserve single-letter names for canonical mathematical loop indices (`i`, `j`) or for ubiquitous higher-order callbacks (`(x) =&gt; x.id`). Avoid hand-rolled abbreviations — they save typing once and cost reading every time after.</description>
+  <projection>
+    <level name="summary" file="chunks/summary.md" tokens="99"/>
+    <level name="core"    file="chunks/core.md"    tokens="237"/>
+    <level name="full"    file="chunks/full.md"    tokens="258"/>
+  </projection>
+</atom>

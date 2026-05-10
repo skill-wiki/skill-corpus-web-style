@@ -1,0 +1,47 @@
+# Skill pack manifest — @web-style
+#
+# This file declares the Skill identity, version, and pack metadata that
+# the marketplace and Prime CLI consume. Atom files live in primes/ and
+# emit to compiled/ (see README for build instructions).
+
+prime-version: "1.0"
+name: "@web-style"
+version: "0.1.0"
+description: >
+  Airbnb JavaScript Style Guide and Google JavaScript Style Guide distilled
+  into typed Prime atoms — naming, variable declarations, functions,
+  objects, arrays, modules, plus core style principles. Starter seed set;
+  intended to grow.
+
+license: Apache-2.0
+homepage: https://github.com/skill-wiki/skill-corpus-web-style
+repository: https://github.com/skill-wiki/skill-corpus-web-style
+maintainers:
+  - skill-wiki
+
+# Source corpora — see LICENSE for full attribution.
+sources:
+  - title: Airbnb JavaScript Style Guide
+    url: https://github.com/airbnb/javascript
+    license: MIT
+  - title: Google JavaScript Style Guide
+    url: https://google.github.io/styleguide/jsguide.html
+    license: CC-BY-3.0
+
+# Atom layout
+primes-dir: primes
+compiled-dir: compiled
+
+tags:
+  - javascript
+  - style-guide
+  - linting
+  - airbnb
+  - google
+  - naming
+  - variables
+  - functions
+  - modules
+  - es6
+  - frontend
+  - backend

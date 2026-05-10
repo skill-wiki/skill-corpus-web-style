@@ -1,0 +1,138 @@
+# skill-corpus-web-style/domain.yaml
+#
+# Domain configuration for the JavaScript style corpus distilled from the
+# Airbnb and Google JavaScript Style Guides. Drop this file in the corpus
+# directory and Prime will load it at startup — no code changes required.
+#
+# Schema reference: spec/DOMAIN-EXTENSION-SPEC.md
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: web-style
+version: "0.1.0"
+description: >
+  Domain plugin for JavaScript style corpora. Covers naming conventions,
+  variable declarations, function shape, object and array idioms, module
+  layout, and core readability principles drawn from Airbnb and Google
+  style guides.
+
+# ─── Tag Vocabulary ───────────────────────────────────────────────────────────
+#
+# Words that appear in a user's brief and signal this domain.
+#
+tags:
+  - javascript
+  - js
+  - typescript
+  - style
+  - style-guide
+  - lint
+  - linting
+  - eslint
+  - airbnb
+  - google
+  - naming
+  - variable
+  - declaration
+  - const
+  - let
+  - var
+  - camelcase
+  - pascalcase
+  - function
+  - arrow-function
+  - default-parameters
+  - spread
+  - rest
+  - object
+  - array
+  - destructuring
+  - import
+  - export
+  - module
+  - es6
+  - readability
+  - clarity
+  - consistency
+
+# ─── Retrieval Axes ───────────────────────────────────────────────────────────
+#
+# Domain-specific dimensions of a brief. Atoms tagged on these axes score
+# higher when the brief mentions the matching terms.
+#
+axes:
+  - name: scope
+    description: >
+      The language surface the rule governs — declarations, names,
+      functions, objects, arrays, modules.
+    matches:
+      - naming
+      - declaration
+      - function
+      - object
+      - array
+      - module
+      - import
+      - export
+      - control-flow
+
+  - name: severity
+    description: >
+      How firmly a style guide enforces the rule — error (always),
+      warning (almost always), suggestion (preference).
+    matches:
+      - error
+      - warning
+      - suggestion
+
+  - name: language
+    description: >
+      Which language family the atom applies to. JavaScript-specific
+      atoms apply to TypeScript by inheritance unless otherwise noted.
+    matches:
+      - javascript
+      - typescript
+      - jsx
+      - tsx
+      - es6
+      - es2015-plus
+
+# ─── Composition Contract ─────────────────────────────────────────────────────
+#
+# Domain-specific fields that can appear in a retrieval call's contract block.
+# Every domain implicitly also has must_include and must_avoid.
+#
+contract:
+  enforcement_level:
+    type: enum
+    values:
+      - error
+      - warning
+      - suggestion
+    description: >
+      Minimum enforcement tier for rule atoms in the retrieved set.
+
+  target_environment:
+    type: enum
+    values:
+      - web-frontend
+      - web-backend
+      - node
+      - browser
+      - any
+    description: >
+      Where the guidance should apply. Atoms targeting an incompatible
+      surface are demoted in ranking.
+
+# ─── Output Validators ────────────────────────────────────────────────────────
+validators:
+  - name: rule-has-checks
+    description: >
+      Every rule atom must have a non-empty checks field that provides
+      concrete, verifiable conditions. A rule without checks is not actionable.
+    checker: builtin:rule-has-checks
+
+  - name: anti-pattern-has-counterpart
+    description: >
+      Every anti-pattern atom should have at least one related rule or
+      pattern atom that provides the recommended alternative.
+    checker: builtin:anti-pattern-has-counterpart

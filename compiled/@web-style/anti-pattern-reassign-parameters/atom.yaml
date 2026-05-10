@@ -1,0 +1,21 @@
+id: "@web-style/anti-pattern-reassign-parameters"
+kind: anti-pattern
+version: "0.1.0"
+description: "Treating a parameter as a mutable local — assigning to it, mutating its properties when the caller did not opt in, or using it as scratch space. The parameter binding is part of the function's contract with its callers; rewriting it in the body breaks the obvious mapping between the call site and what runs."
+domain: web-style
+content_hash: "sha256:7149606fe3a8767c8d38f01355c98e66636911f9d2bfae66d87e20670546c2d1"
+tokens:
+  summary: 93
+  core: 313
+  full: 534
+projection:
+  summary: "chunks/summary.md"
+  core: "chunks/core.md"
+  full: "chunks/full.md"
+quality:
+  overall: 4
+relations:
+  - { type: related, target: "@web-style/rule-default-parameters-not-mutate-args" }
+  - { type: related, target: "@web-style/rule-prefer-const-over-let" }
+  - { type: related, target: "@web-style/principle-clarity-over-cleverness" }
+created_at: "2026-05-10"

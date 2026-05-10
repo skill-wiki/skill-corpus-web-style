@@ -1,0 +1,6 @@
+atom: "@web-style/anti-pattern-import-for-side-effects"
+relations:
+  - type: related
+    target: "@web-style/rule-named-imports-stable-paths"
+  - type: related
+    target: "@web-style/principle-clarity-over-cleverness"

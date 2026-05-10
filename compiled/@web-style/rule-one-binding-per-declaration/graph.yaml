@@ -1,0 +1,6 @@
+atom: "@web-style/rule-one-binding-per-declaration"
+relations:
+  - type: related
+    target: "@web-style/rule-prefer-const-over-let"
+  - type: related
+    target: "@web-style/principle-clarity-over-cleverness"

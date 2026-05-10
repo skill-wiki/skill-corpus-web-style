@@ -1,0 +1,8 @@
+atom: "@web-style/principle-clarity-over-cleverness"
+relations:
+  - type: related
+    target: "@web-style/principle-consistency-within-codebase"
+  - type: related
+    target: "@web-style/rule-descriptive-not-abbreviated-names"
+  - type: related
+    target: "@web-style/rule-prefer-functional-array-methods"

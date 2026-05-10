@@ -1,0 +1,14 @@
+<atom
+  id="@web-style/rule-pascalcase-classes-and-types"
+  kind="rule"
+  version="0.1.0"
+  domain="web-style"
+  tokens="187"
+  q="4.0">
+  <description>Names for things that produce instances or describe shapes — classes, constructor functions, TypeScript types, interfaces, and enum names — are written in `PascalCase`: every word capitalised including the first.</description>
+  <projection>
+    <level name="summary" file="chunks/summary.md" tokens="68"/>
+    <level name="core"    file="chunks/core.md"    tokens="187"/>
+    <level name="full"    file="chunks/full.md"    tokens="208"/>
+  </projection>
+</atom>

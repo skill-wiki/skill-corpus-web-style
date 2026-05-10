@@ -1,0 +1,34 @@
+// Source: Airbnb JavaScript Style Guide (MIT)
+// https://github.com/airbnb/javascript#modules--use-them
+// Also: Google JavaScript Style Guide § 3.3 (CC-BY 3.0)
+// https://google.github.io/styleguide/jsguide.html#file-goog-module
+
+rule NamedImportsStablePaths {
+  id: "@web-style/rule-named-imports-stable-paths"
+  version: "0.1.0"
+
+  label: "Prefer named imports from stable paths; reserve default imports for true single-export modules"
+  domain: web-style
+
+  description: "Use `import { foo, bar } from './lib'` rather than `import lib from './lib'` followed by `lib.foo` and `lib.bar`. Named imports document the API surface, make tree-shaking effective, and resist the trap of a default export later being replaced by a namespace object."
+
+  checks: [
+    "Each external value used in the file is imported by name at the top.",
+    "Default imports appear only when the source module has exactly one logical export (e.g. a React component file).",
+    "Import paths are stable: prefer package roots (`'lodash/get'`, `'@scope/pkg'`) over cross-package deep paths into `dist/` or `src/`.",
+    "Imports are sorted: external packages first, then internal, then relative — and grouped with blank lines (Airbnb / ESLint `import/order`).",
+  ]
+
+  tags: [module, import, javascript, airbnb, google, error]
+
+  notes: [
+    "Wildcard imports (`import * as lib from …`) are fine for namespace-style libraries (e.g. `import * as path from 'path'`) but lose tree-shaking benefit for libraries that expect named imports.",
+    "Mixing default and named exports in the same module is allowed; mixing them in the same import statement (`import lib, { foo } from …`) is fine but can be confusing — consider splitting.",
+  ]
+
+  related: [
+    @web-style/anti-pattern-mutable-named-export,
+    @web-style/anti-pattern-import-for-side-effects,
+    @web-style/principle-consistency-within-codebase,
+  ]
+}

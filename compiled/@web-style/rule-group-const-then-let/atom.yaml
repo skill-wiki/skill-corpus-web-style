@@ -1,0 +1,20 @@
+id: "@web-style/rule-group-const-then-let"
+kind: rule
+version: "0.1.0"
+description: "Within a scope, list every `const` binding before any `let` binding. The reader can then scan the top of the scope and immediately see which bindings are fixed and which will mutate, without re-checking each line."
+domain: web-style
+content_hash: "sha256:d6c82aa018555529fe2ed7762c5b289527fa47d2395ec165973a5fa7fb1a9816"
+tokens:
+  summary: 67
+  core: 165
+  full: 186
+projection:
+  summary: "chunks/summary.md"
+  core: "chunks/core.md"
+  full: "chunks/full.md"
+quality:
+  overall: 4
+relations:
+  - { type: related, target: "@web-style/rule-prefer-const-over-let" }
+  - { type: related, target: "@web-style/rule-one-binding-per-declaration" }
+created_at: "2026-05-10"

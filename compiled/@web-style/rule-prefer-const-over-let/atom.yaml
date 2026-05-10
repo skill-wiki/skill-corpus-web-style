@@ -1,0 +1,20 @@
+id: "@web-style/rule-prefer-const-over-let"
+kind: rule
+version: "0.1.0"
+description: "Declare every binding with `const` by default. Reach for `let` only when the binding is genuinely reassigned. A `const` binding signals to the reader that the slot will not change — that signal is a load-bearing part of readability."
+domain: web-style
+content_hash: "sha256:ddbac1861b4864e7550c709caad112287c96fbe1f62a8acb9bdba59e232c7355"
+tokens:
+  summary: 72
+  core: 188
+  full: 212
+projection:
+  summary: "chunks/summary.md"
+  core: "chunks/core.md"
+  full: "chunks/full.md"
+quality:
+  overall: 4
+relations:
+  - { type: related, target: "@web-style/anti-pattern-use-var" }
+  - { type: related, target: "@web-style/principle-clarity-over-cleverness" }
+created_at: "2026-05-10"

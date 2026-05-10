@@ -1,0 +1,14 @@
+<atom
+  id="@web-style/anti-pattern-use-var"
+  kind="anti-pattern"
+  version="0.1.0"
+  domain="web-style"
+  tokens="252"
+  q="4.0">
+  <description>Using `var` to declare any binding in modern JavaScript or TypeScript. `var` is hoisted to the enclosing function, has no temporal-dead-zone protection, and is silently re-declarable — three properties that exist only because `var` predates block scoping.</description>
+  <projection>
+    <level name="summary" file="chunks/summary.md" tokens="76"/>
+    <level name="core"    file="chunks/core.md"    tokens="252"/>
+    <level name="full"    file="chunks/full.md"    tokens="428"/>
+  </projection>
+</atom>

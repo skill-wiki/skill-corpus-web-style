@@ -1,0 +1,6 @@
+atom: "@web-style/rule-uppercase-snake-for-true-constants"
+relations:
+  - type: related
+    target: "@web-style/rule-camelcase-variables-and-functions"
+  - type: related
+    target: "@web-style/rule-prefer-const-over-let"

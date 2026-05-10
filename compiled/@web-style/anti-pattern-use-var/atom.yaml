@@ -1,0 +1,20 @@
+id: "@web-style/anti-pattern-use-var"
+kind: anti-pattern
+version: "0.1.0"
+description: "Using `var` to declare any binding in modern JavaScript or TypeScript. `var` is hoisted to the enclosing function, has no temporal-dead-zone protection, and is silently re-declarable — three properties that exist only because `var` predates block scoping."
+domain: web-style
+content_hash: "sha256:77fb95ed80fd12810de85d1833cf764a5cd837ae147e649cc169704634150039"
+tokens:
+  summary: 76
+  core: 252
+  full: 428
+projection:
+  summary: "chunks/summary.md"
+  core: "chunks/core.md"
+  full: "chunks/full.md"
+quality:
+  overall: 4
+relations:
+  - { type: related, target: "@web-style/rule-prefer-const-over-let" }
+  - { type: related, target: "@web-style/principle-clarity-over-cleverness" }
+created_at: "2026-05-10"

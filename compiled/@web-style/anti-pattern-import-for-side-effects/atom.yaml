@@ -1,0 +1,20 @@
+id: "@web-style/anti-pattern-import-for-side-effects"
+kind: anti-pattern
+version: "0.1.0"
+description: "Writing `import './polyfills'` or `import 'register-handlers'` to trigger code execution at module load. The line has no value on the left of `from`, no symbols are bound, and the import is needed only because evaluating the file does work — registers a handler, patches a prototype, mutates a global."
+domain: web-style
+content_hash: "sha256:0c1d07b78a4689cca8bf059c7e1c2c43286bc7fb398ee66f28de206d1ecf9974"
+tokens:
+  summary: 91
+  core: 346
+  full: 600
+projection:
+  summary: "chunks/summary.md"
+  core: "chunks/core.md"
+  full: "chunks/full.md"
+quality:
+  overall: 4
+relations:
+  - { type: related, target: "@web-style/rule-named-imports-stable-paths" }
+  - { type: related, target: "@web-style/principle-clarity-over-cleverness" }
+created_at: "2026-05-10"

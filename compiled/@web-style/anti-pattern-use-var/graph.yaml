@@ -1,0 +1,6 @@
+atom: "@web-style/anti-pattern-use-var"
+relations:
+  - type: related
+    target: "@web-style/rule-prefer-const-over-let"
+  - type: related
+    target: "@web-style/principle-clarity-over-cleverness"

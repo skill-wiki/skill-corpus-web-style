@@ -1,0 +1,14 @@
+<atom
+  id="@web-style/anti-pattern-import-for-side-effects"
+  kind="anti-pattern"
+  version="0.1.0"
+  domain="web-style"
+  tokens="346"
+  q="4.0">
+  <description>Writing `import &apos;./polyfills&apos;` or `import &apos;register-handlers&apos;` to trigger code execution at module load. The line has no value on the left of `from`, no symbols are bound, and the import is needed only because evaluating the file does work — registers a handler, patches a prototype, mutates a global.</description>
+  <projection>
+    <level name="summary" file="chunks/summary.md" tokens="91"/>
+    <level name="core"    file="chunks/core.md"    tokens="346"/>
+    <level name="full"    file="chunks/full.md"    tokens="600"/>
+  </projection>
+</atom>

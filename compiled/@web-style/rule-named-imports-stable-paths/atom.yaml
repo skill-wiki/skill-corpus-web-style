@@ -1,0 +1,21 @@
+id: "@web-style/rule-named-imports-stable-paths"
+kind: rule
+version: "0.1.0"
+description: "Use `import { foo, bar } from './lib'` rather than `import lib from './lib'` followed by `lib.foo` and `lib.bar`. Named imports document the API surface, make tree-shaking effective, and resist the trap of a default export later being replaced by a namespace object."
+domain: web-style
+content_hash: "sha256:759af6fb575c92c120750e83071540387a208c72bdbb32c991422fcba593249b"
+tokens:
+  summary: 81
+  core: 230
+  full: 256
+projection:
+  summary: "chunks/summary.md"
+  core: "chunks/core.md"
+  full: "chunks/full.md"
+quality:
+  overall: 4
+relations:
+  - { type: related, target: "@web-style/anti-pattern-mutable-named-export" }
+  - { type: related, target: "@web-style/anti-pattern-import-for-side-effects" }
+  - { type: related, target: "@web-style/principle-consistency-within-codebase" }
+created_at: "2026-05-10"

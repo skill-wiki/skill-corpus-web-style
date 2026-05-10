@@ -1,0 +1,42 @@
+// Source: Google JavaScript Style Guide § 3.3 (CC-BY 3.0)
+// https://google.github.io/styleguide/jsguide.html#file-goog-module
+// Also: Airbnb JavaScript Style Guide (MIT)
+// https://github.com/airbnb/javascript#modules--imports-first
+
+anti-pattern ImportForSideEffects {
+  id: "@web-style/anti-pattern-import-for-side-effects"
+  version: "0.1.0"
+
+  label: "Importing a module purely for its side effects"
+  domain: web-style
+
+  description: "Writing `import './polyfills'` or `import 'register-handlers'` to trigger code execution at module load. The line has no value on the left of `from`, no symbols are bound, and the import is needed only because evaluating the file does work — registers a handler, patches a prototype, mutates a global."
+
+  why-bad: "Side-effect imports break tree-shaking: bundlers cannot drop the module even if nothing else references it, because they cannot prove the module is pure. Order of evaluation suddenly matters and is hard to see — one teammate moves the import, polyfills load after the code that needs them, the bug is reproducible only in production. The dependency graph also becomes invisible: nothing in the importing file says \"this module set up timers / event listeners / globals\"."
+
+  instead-do: """
+    Export an explicit initialiser and call it from the module's
+    composition root:
+
+      // polyfills.ts
+      export function installPolyfills() { … }
+
+      // entry.ts
+      import { installPolyfills } from './polyfills';
+      installPolyfills();
+
+    Now the side effect is visible at the call site, the order is fixed
+    by code rather than by import order, and tree-shaking sees a
+    referenced symbol it can keep or drop based on usage.
+  """
+
+  notes: [
+    "The legitimate exceptions are CSS imports, hot-module-reload registration, and a handful of legacy polyfill packages whose only API *is* the side effect.",
+    "When a side-effect import is unavoidable, document it inline: `// side effect: registers Sentry global`.",
+  ]
+
+  related: [
+    @web-style/rule-named-imports-stable-paths,
+    @web-style/principle-clarity-over-cleverness,
+  ]
+}

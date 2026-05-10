@@ -1,0 +1,8 @@
+atom: "@web-style/rule-prefer-spread-over-apply"
+relations:
+  - type: related
+    target: "@web-style/rule-arrow-functions-for-callbacks"
+  - type: related
+    target: "@web-style/rule-object-shorthand-and-computed-keys"
+  - type: related
+    target: "@web-style/rule-prefer-functional-array-methods"

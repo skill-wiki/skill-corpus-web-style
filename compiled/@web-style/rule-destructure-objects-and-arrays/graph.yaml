@@ -1,0 +1,6 @@
+atom: "@web-style/rule-destructure-objects-and-arrays"
+relations:
+  - type: related
+    target: "@web-style/rule-object-shorthand-and-computed-keys"
+  - type: related
+    target: "@web-style/rule-prefer-spread-over-apply"

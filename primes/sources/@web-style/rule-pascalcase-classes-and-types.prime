@@ -1,0 +1,33 @@
+// Source: Airbnb JavaScript Style Guide (MIT)
+// https://github.com/airbnb/javascript#naming--PascalCase
+// Also: Google JavaScript Style Guide § 5.2.2 (CC-BY 3.0)
+// https://google.github.io/styleguide/jsguide.html#naming-class-names
+
+rule PascalCaseClassesAndTypes {
+  id: "@web-style/rule-pascalcase-classes-and-types"
+  version: "0.1.0"
+
+  label: "Classes, constructors, type aliases, interfaces, and enums use PascalCase"
+  domain: web-style
+
+  description: "Names for things that produce instances or describe shapes — classes, constructor functions, TypeScript types, interfaces, and enum names — are written in `PascalCase`: every word capitalised including the first."
+
+  checks: [
+    "Class declarations match `[A-Z][a-zA-Z0-9]*` (e.g. `UserSession`, `HttpClient`).",
+    "TypeScript `type`, `interface`, and `enum` declarations use the same PascalCase shape.",
+    "React component identifiers — function or class — are PascalCase; lowercase names are reserved for HTML intrinsics.",
+    "ESLint `new-cap` rule (or TypeScript naming-convention) enforces this.",
+  ]
+
+  tags: [naming, pascalcase, classes, types, javascript, typescript, react, airbnb, google]
+
+  notes: [
+    "Acronyms are treated as words here too: `HttpClient`, not `HTTPClient`.",
+    "Enum *members* are usually UPPER_SNAKE_CASE; the enum itself is PascalCase.",
+  ]
+
+  related: [
+    @web-style/rule-camelcase-variables-and-functions,
+    @web-style/rule-uppercase-snake-for-true-constants,
+  ]
+}

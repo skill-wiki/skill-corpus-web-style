@@ -1,0 +1,8 @@
+atom: "@web-style/rule-arrow-functions-for-callbacks"
+relations:
+  - type: related
+    target: "@web-style/rule-default-parameters-not-mutate-args"
+  - type: related
+    target: "@web-style/anti-pattern-reassign-parameters"
+  - type: related
+    target: "@web-style/principle-clarity-over-cleverness"

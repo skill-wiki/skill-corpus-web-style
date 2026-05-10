@@ -1,0 +1,20 @@
+id: "@web-style/rule-destructure-objects-and-arrays"
+kind: rule
+version: "0.1.0"
+description: "When a function reads more than one property of an object — its parameter, its return value, or any local — pull them out with destructuring. When a function returns several named values, return an object and let the caller destructure; do not return an array unless the order is meaningful and stable forever."
+domain: web-style
+content_hash: "sha256:9fd3384684aec89f862d85f55e2fac32f1b15a3f3268ca3a5a69d0d403e5dc8c"
+tokens:
+  summary: 93
+  core: 231
+  full: 258
+projection:
+  summary: "chunks/summary.md"
+  core: "chunks/core.md"
+  full: "chunks/full.md"
+quality:
+  overall: 4
+relations:
+  - { type: related, target: "@web-style/rule-object-shorthand-and-computed-keys" }
+  - { type: related, target: "@web-style/rule-prefer-spread-over-apply" }
+created_at: "2026-05-10"

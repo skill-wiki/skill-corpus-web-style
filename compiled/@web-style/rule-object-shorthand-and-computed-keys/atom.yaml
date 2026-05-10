@@ -1,0 +1,20 @@
+id: "@web-style/rule-object-shorthand-and-computed-keys"
+kind: rule
+version: "0.1.0"
+description: "Build objects with the most expressive ES2015+ syntax available at the literal: shorthand for properties whose key matches the source variable, method shorthand for inline methods, and computed-key syntax (`{ [expr]: value }`) for keys derived at construction time. Each form replaces a more verbose pre-ES2015 idiom and signals intent clearly."
+domain: web-style
+content_hash: "sha256:3ce61ea53a242f1aaf3a9dfd94b25f534ceae789b199f530f807b441f21e84fd"
+tokens:
+  summary: 103
+  core: 236
+  full: 257
+projection:
+  summary: "chunks/summary.md"
+  core: "chunks/core.md"
+  full: "chunks/full.md"
+quality:
+  overall: 4
+relations:
+  - { type: related, target: "@web-style/rule-prefer-spread-over-apply" }
+  - { type: related, target: "@web-style/rule-prefer-functional-array-methods" }
+created_at: "2026-05-10"

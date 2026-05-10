@@ -1,0 +1,32 @@
+// Source: Airbnb JavaScript Style Guide (MIT)
+// https://github.com/airbnb/javascript#destructuring--object
+// https://github.com/airbnb/javascript#destructuring--array
+
+rule DestructureObjectsAndArrays {
+  id: "@web-style/rule-destructure-objects-and-arrays"
+  version: "0.1.0"
+
+  label: "Destructure when accessing multiple properties; prefer object destructuring for multi-value returns"
+  domain: web-style
+
+  description: "When a function reads more than one property of an object — its parameter, its return value, or any local — pull them out with destructuring. When a function returns several named values, return an object and let the caller destructure; do not return an array unless the order is meaningful and stable forever."
+
+  checks: [
+    "Multi-property reads use `const { a, b } = source` rather than repeated `source.a`, `source.b`.",
+    "Function parameters that are options bags are destructured in the signature: `function fn({ id, name }) { … }`.",
+    "Multi-value returns are objects, not positional arrays — except for canonical ordered pairs (e.g. React's `useState`).",
+    "Defaults inside destructuring are written `const { a = 0, b = '' } = source`.",
+  ]
+
+  tags: [object, array, destructuring, javascript, airbnb, error]
+
+  notes: [
+    "Returning `{ data, error }` instead of `[data, error]` lets the caller pick whichever fields they care about by name and lets you add more without a breaking signature change.",
+    "Be careful with destructuring in hot paths on very large objects — V8 will optimise it well, but watch out for accidentally pulling getters that have side effects.",
+  ]
+
+  related: [
+    @web-style/rule-object-shorthand-and-computed-keys,
+    @web-style/rule-prefer-spread-over-apply,
+  ]
+}

@@ -1,0 +1,8 @@
+atom: "@web-style/rule-camelcase-variables-and-functions"
+relations:
+  - type: related
+    target: "@web-style/rule-pascalcase-classes-and-types"
+  - type: related
+    target: "@web-style/rule-uppercase-snake-for-true-constants"
+  - type: related
+    target: "@web-style/rule-descriptive-not-abbreviated-names"

@@ -1,0 +1,32 @@
+// Source: Airbnb JavaScript Style Guide (MIT)
+// https://github.com/airbnb/javascript#es6-array-spreads
+
+rule PreferSpreadOverApply {
+  id: "@web-style/rule-prefer-spread-over-apply"
+  version: "0.1.0"
+
+  label: "Prefer the spread operator over `.apply()` and `arguments`-based variadic plumbing"
+  domain: web-style
+
+  description: "When passing a list of values as positional arguments, spread the array (`fn(...args)`) instead of calling `fn.apply(null, args)`. When collecting variadic arguments, use rest parameters (`function fn(...args)`) instead of inspecting the legacy `arguments` object. Both spread and rest are dedicated syntax for the job, and both compose cleanly with arrow functions."
+
+  checks: [
+    "Variadic forwarding is `wrapper(...args)`, not `wrapper.apply(this, args)`.",
+    "Variadic capture is `function fn(...args) { … }`, not `function fn() { var args = arguments; … }`.",
+    "Array copy is `[...source]` or `Array.from(source)`, not `source.slice()` followed by mutation patterns.",
+    "Object copy / merge is `{ ...source, override }`, not `Object.assign({}, source, { override })` (both work; spread is the style choice).",
+  ]
+
+  tags: [function, spread, rest, javascript, airbnb, suggestion]
+
+  notes: [
+    "Arrow functions do not have their own `arguments`, so the rest-parameter form is the only option there anyway.",
+    "Object spread is shallow — for nested merges you still need a deep-merge utility.",
+  ]
+
+  related: [
+    @web-style/rule-arrow-functions-for-callbacks,
+    @web-style/rule-object-shorthand-and-computed-keys,
+    @web-style/rule-prefer-functional-array-methods,
+  ]
+}

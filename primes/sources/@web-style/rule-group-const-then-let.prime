@@ -1,0 +1,30 @@
+// Source: Airbnb JavaScript Style Guide (MIT)
+// https://github.com/airbnb/javascript#variables--const-let-group
+
+rule GroupConstThenLet {
+  id: "@web-style/rule-group-const-then-let"
+  version: "0.1.0"
+
+  label: "Group all `const` declarations first, then group all `let` declarations"
+  domain: web-style
+
+  description: "Within a scope, list every `const` binding before any `let` binding. The reader can then scan the top of the scope and immediately see which bindings are fixed and which will mutate, without re-checking each line."
+
+  checks: [
+    "All `const` declarations appear above the first `let` in the same scope.",
+    "Imports and other top-of-file boilerplate sit above this group.",
+    "Reordering a `const` to fit this rule does not change its initialisation order — declare the dependency `const` before the `const` that needs it.",
+  ]
+
+  tags: [declaration, layout, javascript, airbnb, suggestion]
+
+  notes: [
+    "This rule pairs with `prefer-const-over-let`: when most bindings are `const`, the `let`s stand out at the bottom as the things that change.",
+    "Inside short functions the rule is a guideline; in longer scopes it is a real readability win.",
+  ]
+
+  related: [
+    @web-style/rule-prefer-const-over-let,
+    @web-style/rule-one-binding-per-declaration,
+  ]
+}

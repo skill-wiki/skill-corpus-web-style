@@ -1,0 +1,14 @@
+<atom
+  id="@web-style/rule-uppercase-snake-for-true-constants"
+  kind="rule"
+  version="0.1.0"
+  domain="web-style"
+  tokens="205"
+  q="4.0">
+  <description>Reserve `UPPER_SNAKE_CASE` for top-level program-wide constants whose value is fixed for the lifetime of the program and is also a primitive or deeply frozen value. Not every `const` deserves UPPER_SNAKE_CASE — only the ones that act as named magic values.</description>
+  <projection>
+    <level name="summary" file="chunks/summary.md" tokens="81"/>
+    <level name="core"    file="chunks/core.md"    tokens="205"/>
+    <level name="full"    file="chunks/full.md"    tokens="225"/>
+  </projection>
+</atom>

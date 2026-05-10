@@ -1,0 +1,21 @@
+id: "@web-style/principle-consistency-within-codebase"
+kind: principle
+version: "0.1.0"
+description: "Within one codebase, the same problem should be solved the same way. When two reasonable conventions exist, pick one and apply it everywhere. The cost of mixing is real: the reader cannot tell when a different choice carries information versus when it is just whoever-typed-it-first preference, so they have to slow down on every line."
+domain: web-style
+content_hash: "sha256:42bee19136ccc5d98c80d88938743bf8d2f89434eaf11de09a529680555245bf"
+tokens:
+  summary: 194
+  core: 325
+  full: 325
+projection:
+  summary: "chunks/summary.md"
+  core: "chunks/core.md"
+  full: "chunks/full.md"
+quality:
+  overall: 4
+relations:
+  - { type: related, target: "@web-style/principle-clarity-over-cleverness" }
+  - { type: related, target: "@web-style/rule-named-imports-stable-paths" }
+  - { type: related, target: "@web-style/rule-camelcase-variables-and-functions" }
+created_at: "2026-05-10"

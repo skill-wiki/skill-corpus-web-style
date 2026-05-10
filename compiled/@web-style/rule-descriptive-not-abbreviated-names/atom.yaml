@@ -1,0 +1,20 @@
+id: "@web-style/rule-descriptive-not-abbreviated-names"
+kind: rule
+version: "0.1.0"
+description: "Identifier length follows information content. Use whole words that describe the role of the binding. Reserve single-letter names for canonical mathematical loop indices (`i`, `j`) or for ubiquitous higher-order callbacks (`(x) => x.id`). Avoid hand-rolled abbreviations — they save typing once and cost reading every time after."
+domain: web-style
+content_hash: "sha256:cca28a12717d7c2185447c4f64992312d0097a93e281a360fd5f0eab453c2ff6"
+tokens:
+  summary: 99
+  core: 237
+  full: 258
+projection:
+  summary: "chunks/summary.md"
+  core: "chunks/core.md"
+  full: "chunks/full.md"
+quality:
+  overall: 4
+relations:
+  - { type: related, target: "@web-style/rule-camelcase-variables-and-functions" }
+  - { type: related, target: "@web-style/principle-clarity-over-cleverness" }
+created_at: "2026-05-10"

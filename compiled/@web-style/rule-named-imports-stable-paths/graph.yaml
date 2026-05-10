@@ -1,0 +1,8 @@
+atom: "@web-style/rule-named-imports-stable-paths"
+relations:
+  - type: related
+    target: "@web-style/anti-pattern-mutable-named-export"
+  - type: related
+    target: "@web-style/anti-pattern-import-for-side-effects"
+  - type: related
+    target: "@web-style/principle-consistency-within-codebase"

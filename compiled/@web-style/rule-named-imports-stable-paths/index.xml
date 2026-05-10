@@ -1,0 +1,14 @@
+<atom
+  id="@web-style/rule-named-imports-stable-paths"
+  kind="rule"
+  version="0.1.0"
+  domain="web-style"
+  tokens="230"
+  q="4.0">
+  <description>Use `import { foo, bar } from &apos;./lib&apos;` rather than `import lib from &apos;./lib&apos;` followed by `lib.foo` and `lib.bar`. Named imports document the API surface, make tree-shaking effective, and resist the trap of a default export later being replaced by a namespace object.</description>
+  <projection>
+    <level name="summary" file="chunks/summary.md" tokens="81"/>
+    <level name="core"    file="chunks/core.md"    tokens="230"/>
+    <level name="full"    file="chunks/full.md"    tokens="256"/>
+  </projection>
+</atom>

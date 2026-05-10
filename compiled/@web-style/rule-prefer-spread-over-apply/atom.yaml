@@ -1,0 +1,21 @@
+id: "@web-style/rule-prefer-spread-over-apply"
+kind: rule
+version: "0.1.0"
+description: "When passing a list of values as positional arguments, spread the array (`fn(...args)`) instead of calling `fn.apply(null, args)`. When collecting variadic arguments, use rest parameters (`function fn(...args)`) instead of inspecting the legacy `arguments` object. Both spread and rest are dedicated syntax for the job, and both compose cleanly with arrow functions."
+domain: web-style
+content_hash: "sha256:ee81e32dbefe5c255a24e8d450a844f0717265db1f203bf7ed825f3a0d194b08"
+tokens:
+  summary: 106
+  core: 242
+  full: 265
+projection:
+  summary: "chunks/summary.md"
+  core: "chunks/core.md"
+  full: "chunks/full.md"
+quality:
+  overall: 4
+relations:
+  - { type: related, target: "@web-style/rule-arrow-functions-for-callbacks" }
+  - { type: related, target: "@web-style/rule-object-shorthand-and-computed-keys" }
+  - { type: related, target: "@web-style/rule-prefer-functional-array-methods" }
+created_at: "2026-05-10"

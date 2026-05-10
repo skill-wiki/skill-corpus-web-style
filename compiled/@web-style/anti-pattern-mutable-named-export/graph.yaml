@@ -1,0 +1,6 @@
+atom: "@web-style/anti-pattern-mutable-named-export"
+relations:
+  - type: related
+    target: "@web-style/rule-named-imports-stable-paths"
+  - type: related
+    target: "@web-style/rule-prefer-const-over-let"

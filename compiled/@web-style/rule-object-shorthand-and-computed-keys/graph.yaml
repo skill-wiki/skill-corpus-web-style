@@ -1,0 +1,6 @@
+atom: "@web-style/rule-object-shorthand-and-computed-keys"
+relations:
+  - type: related
+    target: "@web-style/rule-prefer-spread-over-apply"
+  - type: related
+    target: "@web-style/rule-prefer-functional-array-methods"

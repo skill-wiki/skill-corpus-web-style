@@ -1,0 +1,14 @@
+<atom
+  id="@web-style/rule-destructure-objects-and-arrays"
+  kind="rule"
+  version="0.1.0"
+  domain="web-style"
+  tokens="231"
+  q="4.0">
+  <description>When a function reads more than one property of an object — its parameter, its return value, or any local — pull them out with destructuring. When a function returns several named values, return an object and let the caller destructure; do not return an array unless the order is meaningful and stable forever.</description>
+  <projection>
+    <level name="summary" file="chunks/summary.md" tokens="93"/>
+    <level name="core"    file="chunks/core.md"    tokens="231"/>
+    <level name="full"    file="chunks/full.md"    tokens="258"/>
+  </projection>
+</atom>

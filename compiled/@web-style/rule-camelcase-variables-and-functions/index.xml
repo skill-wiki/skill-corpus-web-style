@@ -1,0 +1,14 @@
+<atom
+  id="@web-style/rule-camelcase-variables-and-functions"
+  kind="rule"
+  version="0.1.0"
+  domain="web-style"
+  tokens="176"
+  q="4.0">
+  <description>Local variables, parameters, function names, methods, and non-static class fields are written in `camelCase` — first word lowercase, every subsequent word capitalised, no underscores or hyphens. Both Airbnb and Google&apos;s style guides require this.</description>
+  <projection>
+    <level name="summary" file="chunks/summary.md" tokens="78"/>
+    <level name="core"    file="chunks/core.md"    tokens="176"/>
+    <level name="full"    file="chunks/full.md"    tokens="197"/>
+  </projection>
+</atom>
