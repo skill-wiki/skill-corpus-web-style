@@ -48,7 +48,7 @@ The marketplace entry will be live once `skill-wiki/website`'s
   "mcpServers": {
     "web-style": {
       "command": "bunx",
-      "args": ["@prime-lang/mcp-server-core"],
+      "args": ["@skill-wiki/mcp-server-core"],
       "env": {
         "PRIME_DIR": "/abs/path/to/skill-corpus-web-style/compiled"
       }
